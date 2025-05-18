@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOARDVAULT</title>
+    <link rel="stylesheet" href="PAGE2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Підключення Font Awesome для іконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/photo/favicon-16x16.png">
+    
+</head>
+<body>
+    <!-- Об'єднана шапка -->
+    <header class="unified-header">
+        <!-- Верхній блок -->
+        <div class="header-top">
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук на сайті">
+            </div>
+            <div class="right-group">
+                <div class="icons">
+                    <a href="https://www.youtube.com/share?url=" class="share-icon youtube" title="Поділитися в YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-icon facebook" title="Поділитися в Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://pinterest.com/pin/create/button/?url=" class="share-icon pinterest" title="Поділитися в Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <button id="loginBtn" class="exit-btn">Ввійти</button>
+            </div>
+        </div>
+
+        <!-- Нижній блок -->
+        <div class="header-bottom">
+            <a href="index.html" class="title">HOARDVAULT</a>
+            <nav>
+                <ul>
+                    <li>Білди</li>
+                    <li>Новини</li>
+                    <li>Гайди</li>
+                </ul>
+            </nav>
+            <button class="buy-orbs"><span>🔵</span> Купить сфери PoE</button>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <main>
+            <!-- Секція з заголовком, датою та іконками поширення -->
+            <header class="build-header">
+                <h1 class="build-title">[3.25] Рубака удару блискавки. Білд на Дуелянта</h1>
+                <div class="build-meta">
+                    <span class="build-date">Опубліковано: 18 травня 2025 г. 12:40</span>
+                    <div class="share-icons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-icon facebook" title="Поделиться в Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=" class="share-icon twitter" title="Поделиться в Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://t.me/share/url?url=" class="share-icon telegram" title="Поделиться в Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://vk.com/share.php?url=" class="share-icon vk" title="Поделиться в VK"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section" id="overview">
+                <h2 class="section-title">ОГЛЯД БІЛДУ</h2>
+                <p>
+                    Рубака через Удар Блискавки - приємний універсальний білд бійця, який включає переваги як ближнього, так і далекого бою. Він має високу швидкість зачистки, гарну втрату і непогану виживання.
+                </p>
+                <p>
+                    Білди через удар блискавки є відмінними стартерами. Вони добре починають лігу з перших хвилин і мають плавну прогресію, що дозволяє крок за кроком поліпшувати персонажа.
+                </p>
+                <p>
+                    Перевагою білда буде стабільно висока швидкість зачистки і сильна бурстова шкода, за рахунок якої можна дуже швидко вбити майже будь-якого боса.
+                </p>
+                <div class="version-comparison">
+                    <div class="version-box">
+                        <h3>Основна версія</h3>
+                        <p class="price-frame">Приблизно 20-45  <span class="divine-orb">Божественна сфера</span> <img src="https://cdn.guides.lootkeeper.com/image/Art/2DItems/Currency/CurrencyModValues.webp" alt="Божественна сфера" class="divine-orb-icon"></p>
+                        <ul>
+                            <li>✔ Червоні мапи</li>
+                            <li>✔ Шахта 300-400 (у максимальній версії можна трохи більше)</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-box">
+                        <h3>Эндгейм</h3>
+                        <p class="price-frame">Приблизно 350-400 + <span class="divine-orb">Божественна сфера</span> <img src="https://cdn.guides.lootkeeper.com/image/Art/2DItems/Currency/CurrencyModValues.webp" alt="Божественна сфера" class="divine-orb-icon"></p>
+                        <ul>
+                            <li>✔ Т17 карти</li>
+                            <li>✔ Шахта на глибині ~700</li>
+                            <li>✔ Обмазані карти під 4-5 сферами деліріуму</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="mechanics">
+                <h2 class="section-title">Ключові механіки</h2>
+                <div class="warning-note">
+                    <span class="highlight-orange">Удар блискавки</span>- це вміння, яке поєднує у собі атаку ближнього та далекого бою. Після атаки ближнього бою персонаж випускає снаряди у конусі перед собою. Здатність від каменю 20 рівня, з 20% якості випускає 4 снаряди.
+                </div>
+                <p>
+                    Здатність за умовчанням конвертує половину фізичної шкоди в шкоду блискавкою.
+                </p>
+                <p>
+                    Удар блискавки поєднує в собі відмінну швидкість зачистки умінь далекого бою та стабільну шкоду по одиночних цілях. Він є одним із найкращих умінь для комфортного проходження карт та битв з босами.
+                </p>
+                    
+                <p>
+                    Ми будемо використовувати камені, таланти та предмети, що змінюють кількість та поведінку снарядів.
+                </p>
+                <p>
+                    Повертаються снаряди - механіка дозволяє снарядам повертатися назад до персонажа, після того, як снаряд просунеться на достатню відстань, або в нього закінчаться заряди пронизання і він вріжеться в нового противника.
+                </p>
+               
+            </section>
+
+            <section class="content-section" id="perevagi">
+                <h2 class="section-title">Переваги та недоліки</h2>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h3>Переваги</h3>
+                        <ul>
+                            <li><span class="checkmark">✔</span> Простий білд із приємним, динамічним геймплеєм</li>
+                            <li>
+                                <span class="checkmark">✔</span> Підходить для новачків
+                            </li>
+                            <li><span class="checkmark">✔</span> Висока швидкість зачищення карт</li>
+                            <li><span class="checkmark">✔</span> Може формувати заряджені карти Т17 (зі сферами деліріуму - тільки в мін-максі)</li>
+                            <li><span class="checkmark">✔</span> Непогане виживання, на всіх етапах розвитку персонажа</li>
+                
+                            <li><span class="checkmark">✔</span> Основна версія здатна вбивати Убер босів. На деяких босах без смертей швидше за все не обійдеться.</li>
+                            <li>
+                                <span class="checkmark">✔</span> Білд фарміт будь-які запрошення Мейвен з високою квантою, у тому числі Запрошення Мейвен: Ті, хто вселяє страх
+                                Ідеально підходить для гри з Мисливець за головами
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h3>Недоліки</h3>
+                        <ul>
+                            <li><span class="cross">✘</span> Хоча у персонажа і непогана виживання, він не є танком. </li>
+                            <li><span class="cross">✘</span> Не підходить для гри на Hardcore лігах (одне життя).</li>
+                            <li><span class="cross">✘</span> Не підходить для гри на SSF лігах. У білді багато унікальних предметів.</li>
+                            <li><span class="cross">✘</span> Слабке виживання у початкових версіях білда </li>
+
+</ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="pob-trees">
+                <h2 class="section-title">PoB і дерева</h2>
+                <div class="pob-list">
+                    <h3>Path of Building</h3>
+                    <ul>
+
+                        <li>
+                            <span class="pob-icon">🧙‍♂️</span>
+                            <span class="pob-title">PoB максимальної версії</span>
+                            <a href="https://pobb.in/6TZ34QXwqu52" class="pob-link-button">Перейти ➔</a>
+                        </li>
+                        <li>
+                            <span class="pob-icon">🧙‍♂️</span>
+                            <span class="pob-title">PoB основної версії</span>
+                            <a href="https://pobb.in/p7Yu-cFHq1UG" class="pob-link-button">Перейти ➔</a>
+                        </li>
+                        <li>
+                            <span class="pob-icon">🧙‍♂️</span>
+                            <span class="pob-title">PoB перехідної версії</span>
+                            <a href="https://pobb.in/p7Yu-cFHq1UG" class="pob-link-button">Перейти ➔</a>
+                        </li>
+                        <li>
+                            <span class="pob-icon">🧙‍♂️</span>
+                            <span class="pob-title">PoB початкової версії</span>
+                            <a href="https://pobb.in/rspTyyZLK7Vo" class="pob-link-button">Перейти ➔</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="content-section" id="class-info">
+                <h2 class="section-title">Клас Пантеон</h2>
+                <p>Клас піднесення - <strong class="highlight-corruption-blast">Рубака</strong></p>
+
+                <div class="talent-container">
+                    <ol class="talent-list">
+                        <li><span class="highlight-orange">Гроза легенд</span> - значно збільшує шкоду з босів і загальну шкоду після вбивства монстрів. Також дає імунітет до відображення фізичної шкоди.</li>
+                        <li><span class="highlight-orange">Кат</span> - дає бонуси швидкості пересування після вбивства будь-якого монстра, швидкості атаки після вбивства рідкісного або унікального монстра, а також миттєво вбиває будь-якого ворога рівень здоров'я опустився до 20% (або нижче) від максимального.</li>
+                        <li><span class="highlight-orange">Неперевершена техніка</span> - талант дає +1 до максимуму Заряд люті, і що робить максимум Заряд витривалості рівним максимуму Заряд люті. </li>
+                        <li><span class="highlight-orange">Жорстоке прагнення</span> - дає ефект оверлічу і знижує збитки під час викрадення здоров'я. При оверличі викрадення здоров'я не припиняється, навіть якщо у персонажа повне здоров'я. </li>
+                    </ol>
+                    <img src="https://guides.lootkeeper.com/media/articles/cyclone-slayer/rubaka-vihr-ciklon-sleer-prokachka-voshozhdeniya.jpg"
+                         alt="Порядок вибору талантів для Рубаки"
+                         class="ascendancy-image">
+                </div>
+            </section>
+
+            <section class="content-section" id="items">
+                <h2 class="section-title">Предмети</h2>
+
+                <div class="item-tabs">
+                    <!-- Зброя -->
+                    <div class="tab">
+                        <button class="tab-btn active">🗡️ Зброя</button>
+                        <div class="tab-content" style="display: block;">
+                            <div class="item-categories">
+                                <div class="item-category">
+                                    <h3>Основна зброя</h3>
+                                    <p>✅ <strong>Рідкісний кіготь на одній з наступних баз:</strong> (The Annihilating:</p>
+                                    <ul>
+                                        <li> Від ударів не можна ухилитися</li>
+
+                                    </ul>
+                                    <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Нагрудний обладунок -->
+                    <div class="tab">
+                        <button class="tab-btn">🦺 Нагрудник</button>
+                        <div class="tab-content">
+                            <div class="item-category">
+                                <h3>Ідеальний варіант</h3>
+                                <p>✅ <strong>Рідкісний крафтовий 6-лінк нагрудник.</strong> з наступними властивостями:</p>
+                                <ul>
+                                    <li>Удари у ближньому бою з #% шансом можуть накласти Укріплення - власна властивість Пожирача Світів</li>
+                                    <li>Стихійні опори (35%+)</li>
+                                    <li>+#% до множника критичного удару для втрат атаками - власна властивість Полум'яного Екзарха</li>
+                                </ul>
+                                <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Рукавиці -->
+                    <div class="tab">
+                        <button class="tab-btn">🧤 Рукавиці</button>
+                        <div class="tab-content">
+                            <div class="item-category">
+                                <p>✅ <strong>Рідкісні рукавички з шансом придушити збитки від чарів. Краще вибирати базу з ухиленням та бронею.</strong> з модами:</p>
+                                <ul>
+                                    <li>[Власна властивість] - #% шанс придушити шкоду від чар - Пожирача Світів, мінімум 6%</li>
+                                    <li>[Власна властивість] - Поплічники мають #% збільшення шкоди - Полум'яного Екзарха</li>
+                                    <li>#% шанс придушити шкоду від чар (13-14% або до капа)</li>
+                                </ul>
+                                <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Штани -->
+                    <div class="tab">
+                        <button class="tab-btn">👖 Штани</button>
+                        <div class="tab-content">
+                            <div class="item-category">
+                                <p>✅ <strong>З шансом придушити шкоду від чарів. Краще вибирати базу з ухиленням та бронею.</strong>:</p>
+                                <ul>
+                                    <li>[Власна властивість] - #% підвищення швидкості регенерації здоров'я - Пожирача Світів, мінімум 10%</li>
+                                    <li>[Власна властивість] - #% підвищення швидкості дій або власна властивість на відсутнє опір - Полум'яного Екзарха</li>
+                                    <li>#% шанс придушити шкоду від чар (13-14% або до капа)</li>
+                                </ul>
+                                <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Шолом -->
+                <div class="tab">
+                    <button class="tab-btn">⛑️ Шолом</button>
+                    <div class="tab-content">
+                        <div class="item-category">
+                            <h3>Оптимальний вибір</h3>
+                            <p>✅ <strong>Унікальний шолом Фрактальна думка дає нам багато спритності.</strong></p>
+                            <ul>
+                                <li>При виборі можна відсортувати за значенням властивість увороту, інші властивості значення немає.</li>
+</ul>
+                            <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пояс -->
+                <div class="tab">
+                    <button class="tab-btn">🎗️ Пояс</button>
+                    <div class="tab-content">
+                        <div class="item-category">
+                            <p>✅ <strong>Клітка Холода</strong> з модами:</p>
+                            <ul>
+                                <li>+50 до максимуму мани</li>
+                                <li>25% збільшення часу дії флаконів</li>
+                                <li>Імунітет до заморожування</li>
+                            </ul>
+                            <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кільця -->
+                <div class="tab">
+                    <button class="tab-btn">💍 Кільця</button>
+                    <div class="tab-content">
+                        <div class="item-category">
+                            <h3>Рекомендовані моди</h3>
+                            <ul>
+                                <li>Кільце 1: #% підвищення спритності - синтезована властивість</li>
+                                <li>Кільце 2: Здоров'я (80+)</li>
+                            </ul>
+                            <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                            <p>🔧 Крафт через метамод "Add Physical Modifier"</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Амулет -->
+                <div class="tab">
+                    <button class="tab-btn">📿 Амулет</button>
+                    <div class="tab-content">
+                        <div class="item-category">
+                            <p>✅ <strong>Унікальний амулет Астраментіс</strong> з характеристиками:</p>
+                            <ul>
+                                <li>Він дає близько 140 всіх характеристик, що дасть нам не тільки спритність з її втратою, а й багато здоров'я. Крім того, це дозволяє повністю закрити вимоги до сили та інтелекту.</li>
+                             
+                            </ul>
+                            <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Самоцвіти -->
+                <div class="tab">
+                    <button class="tab-btn">💎 Самоцвіти</button>
+                    <div class="tab-content">
+                        <div class="gem-grid">
+                            <div class="gem-card">
+                                <h4>Вибух псування</h4>
+                                <p>Рівень 20 / Якість 20%</p>
+                                <ul>
+                                    <li>Додаткові 10% шкоди хаосом</li>
+                                    <li>Зменшує витрати мани на 15%</li>
+                                </ul>
+                                <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                            </div>
+
+                            <div class="gem-card">
+                                <h4>Контроль над стихіями</h4>
+                                <p>Рівень 4 Просвітлений</p>
+                                <ul>
+                                    <li>+2% до критичного удару</li>
+                                    <li>Покращує проникнення стихій</li>
+                                </ul>
+                                <a href="https://www.pathofexile.com/trade" class="item-link">Купити на PoE Trade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="craft-tip">
+                    <p>🔧 <strong>Кластерні самоцвіти</strong> Ми будемо використовувати 1 великий та 1 середній кластерні самоцвіти.</p>
+                </div>
+            </section>
+
+
+            <section class="content-section" id="skill-gems">
+                <h2 class="section-title">🔮 Камені умінь</h2>
+
+                <!-- Таблиця з категоріями каменів -->
+                <div class="gem-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Початкові</th>
+                                <th>Перехідні</th>
+                                <th>Основні</th>
+                                <th>Максимальні</th>
+                        
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>✅ Без нічого </td>
+                                <td>🚧 Фрактальні думки</td>
+                                <td>💎 Політ Гарухан</td>
+                                <td>🔥 Астраментіс</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Список камнів для обладунків -->
+                <div class="gear-gems">
+                    <div class="gear-category">
+                        <h3>🛡️ Броня</h3>
+                        <ul class="gem-checklist">
+                            <li class="checked">✅ Вихор – 20 рівень, 20% якості</li>
+                            <li class="checked">✅ Пробуджений: Маніпуляція порожнечею – 5-6 рівень, 20% якості</li>
+                            <li class="checked">✅ Пробуджений: Вивільнення - 5-6 рівень, якість не важлива</li>
+                            <li class="checked">✅ Посилена підтримка – 20 рівень, 20% якості</li>
+                            <li class="checked">✅ Пробуджений: Збитки поплічників - 5-6 рівень, 20% якості</li>
+                            <li class="checked">✅ Зміцнення – 20 рівень, 20% якості</li>
+                        </ul>
+                    </div>
+
+                    <div class="gear-category">
+                        <h3>🗡️ Зброя</h3>
+                        <ul class="gem-checklist">
+                            <li class="unchecked">◻ Пробуджений: Щедрість – 5-6 рівень, 20% якості</li>
+                            <li class="checked">✅ Шквал клинків - 20 рівень, 20% якості</li>
+                            <li class="unchecked">Вогняний ривок - 20 рівень, 20% якості / Крижаний стрибок - 20 рівень, 20% якості</li>
+                        </ul>
+                    </div>
+
+                    <div class="gear-category">
+                        <h3>🛡️ Щит</h3>
+                        <ul class="gem-checklist">
+                            <li class="checked">✅ Рішучість – 21 рівень, 20% якості</li>
+                            <li class="checked">✅ Щит бурі - 20 рівень, якість не важлива</li>
+                            <li class="checked">✅ Живучість – 20-21 рівень, 0-20% якості</li>
+                        </ul>
+                    </div>
+
+                    <div class="gear-category">
+                        <h3>⛑️ Шолом</h3>
+                        <ul class="gem-checklist">
+                            <li class="unchecked">◻ Удар щитом - 20 рівень, якість не важлива</li>
+                            <li class="checked">✅ Ясність розуму (рівень 10)</li>
+                            <li class="unchecked">◻ Зарозумілість (макс рівень/якість)</li>
+                        </ul>
+                    </div>
+
+                    <div class="gear-category">
+                        <h3>🛡️ Чоботи</h3>
+                        <ul class="gem-checklist">
+                            <li class="unchecked">◻ Заклик кам'яного голему - 20 рівень, якість не важлива</li>
+                            <li class="checked">✅ Голодне розлючення - 20 рівень, 0-20% якості</li>
+                            <li class="unchecked">◻ Поспіх ваал - 20 рівень, 0-20% якості)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Додати перед закриваючим тегом </main> -->
+
+            <section class="popular-articles"id="popular">
+                <h2><span class="fire-icon">📌</span> Популярні статті</h2>
+                <div class="grid">
+                    <!-- Картки з index.html -->
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/b2hI5iYWUrA/maxresdefault.jpg" alt="Settlers Challenge">
+                        <div class="card-content">
+                            <h3>[3.25] Окультист Заклик павуків Аракаалі.</h3>
+                            <p>Білд на Окультиста</p>
+                            <a href="/kultist.html" class="view-btn">Переглянути</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://guides.lootkeeper.com/media/articles/guide-preview_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg" alt="Whirlwind Slayer">
+                        <div class="card-content">
+                            <h3>[3.25] Некромант через Шалені духи.</h3>
+                            <p>Білд на Некроманта</p>
+                            <a href="/necromancer.html" class="view-btn">Переглянути</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://guides.lootkeeper.com/media/articles/guides-preview.jpg" alt="Necromancer">
+                        <div class="card-content">
+                            <h3>[3.25] Бандит Плут Хексбласт міни </h3>
+                            <p>Білд на Бандита</p>
+                            <a href="/Plyt.html" class="view-btn">Переглянути</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tht">
+                <div class="support-block">
+                    <h3>💖 Підтримати проект</h3>
+                    <p>Якщо вам сподобався цей гайд і ви хочете підтримати нас - це допоможе прискорити вихід нових матеріалів.</p>
+                    <a href="#" class="support-button">Підтримати</a>
+                </div>
+            </section>
+
+                <section class="comments-section" id="comment">
+                    <div class="comments">
+                        <h3>💬 Коментарі (2)</h3>
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="author">Якісь користувач</span>
+                                <span class="date">1 місяці тому</span>
+                            </div>
+                            <p class="comment-text">
+                                Так і не придумав ,що сюди вписати...
+                            </p>
+                            <button class="read-more">Читати повністю</button>
+
+                        </div>
+
+                        <div class="comment">
+                            <div class="comment-header">
+                                <span class="author">Якісь користувач 2</span>
+                                <span class="date">2 місяці тому</span>
+                            </div>
+                            <p class="comment-text">
+                                Так і не придумав теж що сюди вписати...
+                            </p>
+                            <button class="read-more">Читати повністю</button>
+
+                        </div>
+                    </div>
+                </section>
+        </main>
+        <nav class="sidebar">
+            <div class="sidebar-nav">
+                <h3 class="navigation-title">Навігація</h3>
+                <ul>
+                    <li><a href="#overview" class="nav-link active">Огляд білду</a></li>
+                    <li><a href="#mechanics" class="nav-link">Ключові механіки</a></li>
+                    <li><a href="#perevagi" class="nav-link">Переваги та недоліки</a></li>
+                    <li><a href="#pob-trees" class="nav-link">PoB і дерева</a></li>
+                    <li><a href="#class-info" class="nav-link">Клас, Пантеон</a></li>
+                    <li><a href="#items" class="nav-link">Предмети</a></li>
+                    <li><a href="#skill-gems" class="nav-link">Камні умінь</a></li>
+                    <li><a href="#popular" class="nav-link">Популярні статті</a></li>
+                    <li><a href="#comment" class="nav-link">Коментарі</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+   
+    <script>
+        document.querySelectorAll('.share-icon').forEach(link => {
+            link.href += encodeURIComponent(window.location.href);
+        });
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.sidebar-nav a');
+            let foundActive = false;
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top + window.scrollY;
+                const sectionBottom = sectionTop + rect.height;
+
+                if (window.scrollY >= sectionTop - 200 && window.scrollY < sectionBottom - 200 && !foundActive) {
+                    const id = section.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                            foundActive = true;
+                        }
+                    });
+                }
+            });
+        }
+
+
+        window.addEventListener('scroll', updateActiveNav);
+
+        document.addEventListener('DOMContentLoaded', updateActiveNav);
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Закрити всі вкладки
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+
+                // Відкрити обрану
+                btn.classList.add('active');
+                const content = btn.closest('.tab').querySelector('.tab-content');
+                content.style.display = 'block';
+            });
+        });
+
+    </script>
+</body>
+</html>

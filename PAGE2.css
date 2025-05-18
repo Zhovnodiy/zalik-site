@@ -1,0 +1,1398 @@
+﻿:root {
+    --background-color: #000000;
+    --header-background: #1a1a1a;
+    --text-color: #ffffff;
+    --title-color: #ffd700;
+    --button-background: #007bff;
+    --search-background: #333333;
+    --accent: #2ecc71;
+    --warning: #ff3b3b;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 140px;
+    font-size: 16px;
+}
+
+.unified-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--header-background);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: padding 0.3s, height 0.3s;
+}
+
+.build-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #888;
+}
+
+.build-date {
+    font-weight: 400;
+}
+
+.build-share {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .build-share:hover {
+        color: var(--title-color);
+    }
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+.left-group {
+    flex: 1;
+}
+
+.search-bar {
+    flex: 0 1 600px;
+    margin: 0 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    max-width: 90%;
+    transition: width 0.3s, margin 0.3s;
+}
+
+    .search-bar input {
+        width: 100%;
+        padding: 10px;
+        background: var(--search-background);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color);
+        font-size: 14px;
+        transition: padding 0.3s;
+    }
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.title {
+    color: var(--title-color);
+    font-size: 32px;
+    margin-right: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: font-size 0.3s;
+}
+
+.section-title {
+    font-size: 24px;
+    transition: font-size 0.3s;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, sans-serif !important;
+    transition: gap 0.3s, opacity 0.3s;
+}
+
+    nav ul li {
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+        nav ul li:hover {
+            color: var(--title-color);
+        }
+
+.buy-orbs {
+    background: var(--button-background);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+.right-group {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    transition: gap 0.3s;
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    transition: gap 0.3s;
+}
+
+.share-icon {
+    color: var(--text-color);
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+    .share-icon i {
+        font-size: 16px;
+    }
+
+    .share-icon:hover {
+        color: var(--title-color);
+    }
+
+.exit-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, padding 0.3s;
+}
+
+    .exit-btn:hover {
+        background: #ffffff15;
+    }
+
+.meta-info {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    max-width: 1300px;
+    margin: 40px auto 0;
+    padding: 0 40px 0 -20px;
+    transition: padding 0.3s;
+}
+
+main {
+    padding-right: 60px;
+    line-height: 1.7;
+    text-align: left;
+    transition: padding 0.3s;
+}
+
+.sidebar {
+    border-left: 1px solid #333;
+    padding-left: 30px;
+    position: sticky;
+    top: 160px;
+    height: fit-content;
+    width: 300px;
+    transition: padding 0.3s, width 0.3s;
+}
+
+.sidebar-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 0;
+    list-style: none;
+    transition: gap 0.3s, opacity 0.3s;
+}
+
+.sidebar-nav li {
+    width: 100%;
+}
+
+.sidebar-nav a {
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #ccc;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+    display: block;
+}
+
+    .sidebar-nav a:hover {
+        color: var(--title-color);
+        background: #1a1a1a;
+    }
+
+    .sidebar-nav a.active {
+        border-left-color: var(--title-color);
+        color: var(--title-color);
+        background: #1a1a1a;
+        position: relative;
+    }
+
+        .sidebar-nav a.active::before {
+            left: -3px;
+            top: 50%;
+            height: 60%;
+            width: 3px;
+            background: var(--title-color);
+            transform: translateY(-50%);
+        }
+
+.content-section {
+    background: var(--section-bg, #1a1a1a);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: left;
+    transition: padding 0.3s;
+}
+
+h2.section-title {
+    font-size: 24px;
+    color: var(--accent);
+    padding-right: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: right;
+    position: relative;
+    display: inline-block;
+    transition: font-size 0.3s;
+}
+
+    h2.section-title::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -750px;
+        width: 750px;
+        height: 1.6px;
+        background-color: #444;
+        transform: translateY(-50%);
+        transition: width 0.3s, right 0.3s;
+    }
+
+.price-tag {
+    background: #3d3d3d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+.version-comparison {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    transition: gap 0.3s;
+}
+
+.version-box {
+    background: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #404040;
+    transition: padding 0.3s;
+}
+
+    .version-box ul {
+        text-align: left;
+        padding-right: 20px;
+        list-style: none;
+    }
+
+.checkmark {
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.warning-note {
+    background: #4a1f1f;
+    padding: 15px;
+    border-radius: 6px;
+    border-right: 4px solid #ff3b3b;
+    border-left: none;
+    margin: 20px 0;
+    text-align: left;
+    transition: padding 0.3s;
+}
+
+.build-header {
+    margin-bottom: 20px;
+    margin-left: 19px;
+}
+
+.share-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: gap 0.3s;
+}
+
+.divine-orb {
+    color: #af8c1b;
+    cursor: help;
+    position: relative;
+    font-weight: bold;
+}
+
+    .divine-orb:hover::after {
+        content: "Торгова валюта в Path of Exile. Використовується для зміни властивостей предметів.";
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: #1a1a1a;
+        color: #fff;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        white-space: nowrap;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        border: 1px solid #444;
+        opacity: 0;
+        transition: opacity 0.2s, bottom 0.2s;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .divine-orb:hover::after {
+        opacity: 1;
+        bottom: calc(100% + 15px);
+    }
+
+.price-frame {
+    background: #3d3d3d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 14px;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+.divine-orb-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+    display: inline-block;
+    transition: width 0.3s, height 0.3s;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+    transition: gap 0.3s;
+}
+
+.pros,
+.cons {
+    background: #252525;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #404040;
+    transition: padding 0.3s;
+}
+
+    .pros h3,
+    .cons h3 {
+        font-size: 18px;
+        color: var(--title-color);
+        margin: 0 0 10px 0;
+        transition: font-size 0.3s;
+    }
+
+    .pros ul,
+    .cons ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+        .pros ul li,
+        .cons ul li {
+            padding: 8px 0;
+            font-size: 15px;
+            transition: font-size 0.3s;
+        }
+
+    .pros .checkmark {
+        color: #00cc00;
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .cons .cross {
+        color: #ff3b3b;
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+.highlight-corruption-blast {
+    color: #800080;
+}
+
+.highlight-green {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.highlight-blue {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.highlight-orange {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.resist {
+    color: cornflowerblue;
+}
+
+.highlight-gray {
+    color: #95a5a6;
+    font-weight: bold;
+}
+
+.pob-button {
+    display: inline-block;
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, padding 0.3s, font-size 0.3s;
+}
+
+    .pob-button:hover {
+        background: #0056b3;
+    }
+
+.pob-list {
+    margin-top: 15px;
+}
+
+    .pob-list h3 {
+        font-size: 20px;
+        color: var(--text-color);
+        margin-bottom: 15px;
+        transition: font-size 0.3s;
+    }
+
+    .pob-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .pob-list ul li {
+            display: flex;
+            align-items: center;
+            background: #252525;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #404040;
+            margin-bottom: 10px;
+            gap: 10px;
+            transition: padding 0.3s;
+        }
+
+.pob-icon {
+    font-size: 20px;
+}
+
+.pob-title {
+    flex: 1;
+    font-size: 16px;
+    color: var(--text-color);
+    transition: font-size 0.3s;
+}
+
+.pob-link-button {
+    background: #007bff;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s, padding 0.3s, font-size 0.3s;
+}
+
+    .pob-link-button:hover {
+        background: #0056b3;
+    }
+
+.talent-list {
+    padding-left: 25px;
+    list-style-type: decimal;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+    .talent-list li {
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+.talent-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+    transition: gap 0.3s;
+}
+
+.ascendancy-image {
+    width: 400px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    margin-left: auto;
+    transition: width 0.3s;
+}
+
+.item-tabs {
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.tab-btn {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .tab-btn:hover {
+        background: #2a2a2a;
+    }
+
+    .tab-btn.active {
+        background: #007bff;
+    }
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #252525;
+    transition: padding 0.3s;
+}
+
+.item-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    transition: gap 0.3s;
+}
+
+.item-category h3 {
+    color: #ffd700;
+    margin-top: 0;
+    font-size: 18px;
+    transition: font-size 0.3s;
+}
+
+.item-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+    transition: font-size 0.3s;
+}
+
+.craft-note {
+    color: #95a5a6;
+    font-size: 0.9em;
+    margin-top: 15px;
+    transition: font-size 0.3s;
+}
+
+.item-category ul {
+    padding-left: 25px;
+    list-style: square;
+    color: #95a5a6;
+}
+
+.item-category li {
+    margin-bottom: 8px;
+}
+
+.craft-tip {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border-left: 4px solid #007bff;
+    transition: padding 0.3s;
+}
+
+.gem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    transition: gap 0.3s;
+}
+
+.gem-card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: padding 0.3s;
+}
+
+    .gem-card h4 {
+        color: #ffd700;
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        transition: font-size 0.3s;
+    }
+
+    .gem-card p {
+        color: #95a5a6;
+        font-size: 0.9em;
+        transition: font-size 0.3s;
+    }
+
+.gem-table {
+    margin: 25px 0;
+    overflow-x: auto;
+}
+
+    .gem-table table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #1a1a1a;
+    }
+
+    .gem-table th,
+    .gem-table td {
+        padding: 15px;
+        border: 1px solid #333;
+        text-align: center;
+        font-size: 14px;
+        transition: padding 0.3s, font-size 0.3s;
+    }
+
+    .gem-table th {
+        background: #007bff;
+        color: #fff;
+    }
+
+.gear-gems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    transition: gap 0.3s;
+}
+
+.gear-category h3 {
+    color: #ffd700;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 18px;
+    transition: font-size 0.3s;
+}
+
+.gem-checklist {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+    .gem-checklist li {
+        padding: 12px;
+        margin: 8px 0;
+        background: #252525;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        transition: padding 0.3s, font-size 0.3s;
+    }
+
+.checked {
+    color: #2ecc71;
+    border-left: 4px solid #2ecc71;
+}
+
+.unchecked {
+    color: #95a5a6;
+    border-left: 4px solid #333;
+}
+
+.popular-articles {
+    margin: 40px 0;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    transition: padding 0.3s;
+}
+
+.comments-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin: 40px 0;
+    transition: gap 0.3s;
+}
+
+.support-block {
+    background: #252525;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: padding 0.3s;
+}
+
+.support-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+.comment {
+    background: #252525;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 1000px;
+    transition: padding 0.3s, width 0.3s;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    color: #95a5a6;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: font-size 0.3s;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 14px;
+    transition: font-size 0.3s;
+}
+
+.popular-articles .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    transition: gap 0.3s;
+}
+
+.popular-articles .card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+    .popular-articles .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+        transition: height 0.3s;
+    }
+
+    .popular-articles .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+.popular-articles .card-content {
+    padding: 20px;
+    position: relative;
+    transition: padding 0.3s;
+}
+
+    .popular-articles .card-content h3 {
+        color: #fff;
+        font-size: 1.2em;
+        margin: 0 0 12px 0;
+        line-height: 1.4;
+        transition: font-size 0.3s;
+    }
+
+    .popular-articles .card-content p {
+        color: #95a5a6;
+        font-size: 0.9em;
+        margin-bottom: 20px;
+        transition: font-size 0.3s;
+    }
+
+.popular-articles .card button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s, padding 0.3s;
+}
+
+    .popular-articles .card button:hover {
+        background: #0056b3;
+    }
+
+.popular-articles .views-counter {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.7);
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+.popular-articles .date-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #252525;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #95a5a6;
+    font-size: 0.8em;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+.card-content .view-btn {
+    background-color: #800080;
+    color: var(--text-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, padding 0.3s, font-size 0.3s;
+}
+
+    .card-content .view-btn:hover {
+        background-color: #a100a1;
+    }
+
+/* Медіа-запити для планшетів (768px і менше) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Зменшуємо padding-top, бо шапка стала компактнішою */
+        font-size: 15px;
+    }
+
+    .unified-header {
+        padding: 10px 15px;
+        height: auto; /* Дозволяємо шапці адаптувати висоту */
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .search-bar {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 1 100px;
+    }
+
+        .search-bar input {
+            padding: 8px;
+            font-size: 13px;
+        }
+
+    .header-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: none; /* Приховуємо меню навігації */
+    }
+
+    .right-group {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .buy-orbs {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .share-icon {
+        font-size: 18px;
+    }
+
+    .exit-btn {
+        padding: 6px 12px;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        margin: 20px auto 0;
+    }
+
+    main {
+        padding-right: 0;
+        margin-top: 0; /* Прибираємо зайвий відступ */
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 0; /* Прибираємо зайвий відступ */
+        padding-top: 0; /* Уникаємо зайвого простору зверху */
+    }
+
+    .sidebar-nav ul {
+        display: none; /* Приховуємо меню навігації в бічній панелі */
+    }
+
+    h2.section-title {
+        font-size: 22px;
+    }
+
+        h2.section-title::after {
+            width: 200px;
+            right: -200px;
+        }
+
+    .price-tag,
+    .price-frame {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .version-comparison,
+    .gem-grid,
+    .gear-gems,
+    .item-categories {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .pros-cons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pros,
+    .cons {
+        padding: 12px;
+    }
+
+        .pros h3,
+        .cons h3 {
+            font-size: 16px;
+        }
+
+        .pros ul li,
+        .cons ul li {
+            font-size: 14px;
+        }
+
+    .pob-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .pob-list h3 {
+        font-size: 18px;
+    }
+
+    .pob-list ul li {
+        padding: 8px 12px;
+    }
+
+    .pob-title {
+        font-size: 14px;
+    }
+
+    .pob-link-button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .ascendancy-image {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .item-category h3 {
+        font-size: 16px;
+    }
+
+    .item-link {
+        font-size: 13px;
+    }
+
+    .craft-note {
+        font-size: 0.85em;
+    }
+
+    .craft-tip {
+        padding: 12px;
+    }
+
+    .gem-card {
+        padding: 12px;
+    }
+
+        .gem-card h4 {
+            font-size: 15px;
+        }
+
+        .gem-card p {
+            font-size: 0.85em;
+        }
+
+    .gem-table th,
+    .gem-table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .gear-category h3 {
+        font-size: 16px;
+    }
+
+    .gem-checklist li {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .comments-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .comment {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .comment-header {
+        font-size: 13px;
+    }
+
+    .read-more {
+        font-size: 13px;
+    }
+
+    .popular-articles {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+        .popular-articles .grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .popular-articles .card img {
+            height: 120px;
+        }
+
+        .popular-articles .card-content {
+            padding: 15px;
+        }
+
+            .popular-articles .card-content h3 {
+                font-size: 1.1em;
+            }
+
+            .popular-articles .card-content p {
+                font-size: 0.85em;
+            }
+
+        .popular-articles .card button,
+        .popular-articles .card .view-btn {
+            padding: 8px 20px;
+            font-size: 13px;
+        }
+
+        .popular-articles .views-counter {
+            font-size: 0.75em;
+            padding: 4px 8px;
+        }
+
+        .popular-articles .date-badge {
+            font-size: 0.75em;
+            padding: 4px 8px;
+        }
+
+    .support-block {
+        padding: 20px;
+    }
+
+    .support-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Медіа-запити для смартфонів (480px і менше) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px; /* Ще більше зменшуємо для малих екранів */
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    h2.section-title::after {
+        width: 100px;
+        right: -100px;
+    }
+
+    .search-bar input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .buy-orbs {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .share-icon {
+        font-size: 16px;
+    }
+
+    .exit-btn {
+        padding: 5px 10px;
+    }
+
+    .content-wrapper {
+        padding: 0 15px;
+        margin: 15px auto 0;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .price-tag,
+    .price-frame {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .version-box {
+        padding: 15px;
+    }
+
+        .version-box ul,
+        .gem-card p,
+        .item-link,
+        .craft-note,
+        .craft-tip {
+            font-size: 12px;
+        }
+
+    .pros h3,
+    .cons h3 {
+        font-size: 15px;
+    }
+
+    .pros ul li,
+    .cons ul li {
+        font-size: 13px;
+        padding: 6px 0;
+    }
+
+    .pob-button {
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+
+    .pob-list h3 {
+        font-size: 16px;
+    }
+
+    .pob-list ul li {
+        padding: 7px 10px;
+    }
+
+    .pob-title {
+        font-size: 13px;
+    }
+
+    .pob-link-button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .ascendancy-image {
+        max-width: 300px;
+    }
+
+    .item-category h3 {
+        font-size: 15px;
+    }
+
+    .gem-card h4 {
+        font-size: 14px;
+    }
+
+    .gem-table th,
+    .gem-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .gear-category h3 {
+        font-size: 15px;
+    }
+
+    .gem-checklist li {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .comment {
+        padding: 12px;
+    }
+
+    .comment-header {
+        font-size: 12px;
+    }
+
+    .read-more {
+        font-size: 12px;
+    }
+
+    .popular-articles {
+        padding: 15px;
+    }
+
+        .popular-articles .grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .popular-articles .card img {
+            height: 100px;
+        }
+
+        .popular-articles .card-content {
+            padding: 12px;
+        }
+
+            .popular-articles .card-content h3 {
+                font-size: 1em;
+            }
+
+            .popular-articles .card-content p {
+                font-size: 0.8em;
+            }
+
+        .popular-articles .card button,
+        .popular-articles .card .view-btn {
+            padding: 7px 15px;
+            font-size: 12px;
+        }
+
+    .support-block {
+        padding: 15px;
+    }
+
+    .support-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
